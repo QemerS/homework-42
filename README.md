@@ -1,1 +1,1 @@
-# homework-42
+# Array methods, selectors, create element, class list
