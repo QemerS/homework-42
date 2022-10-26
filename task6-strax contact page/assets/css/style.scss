@@ -64,6 +64,40 @@ nav {
             border-top: 1px solid lightgray  ;
         }
     }
+    .additional-buttons {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: white;
+        box-shadow: 1px -1px 13px -7px grey;
+        padding: 1rem;
+        border-radius: 5px;
+        transform: rotateY(90deg);
+        transition: all 0.5s ease-in-out;
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 1rem;
+            color: white;
+        }
+        #get-started {
+            background-color: $mainGreen;
+            &:hover {
+                cursor: pointer;
+                background-color: $darkBlue;
+            }
+        }
+        #log-in {
+            background-color: $darkBlue;
+            &:hover {
+                cursor: pointer;
+                background-color: $mainGreen;
+            }
+        }
+    }
+    .additional-buttons-active {
+        transform: rotateY(0deg);
+    }
 }
 header {
     background-color: $mainOrange;

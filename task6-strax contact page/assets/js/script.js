@@ -10,3 +10,9 @@ menuBtn.addEventListener('click', function () {
         btnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
     }
 });
+
+const dotBtn = document.querySelector('#dot-menu');
+const addition = document.querySelector('.additional-buttons');
+dotBtn.addEventListener('click', function () {
+    addition.classList.toggle('additional-buttons-active')
+})

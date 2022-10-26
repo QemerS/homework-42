@@ -92,6 +92,51 @@ nav .nav-links > :first-child {
   border-top: 1px solid lightgray;
 }
 
+nav .additional-buttons {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  -webkit-box-shadow: 1px -1px 13px -7px grey;
+          box-shadow: 1px -1px 13px -7px grey;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .additional-buttons button {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+}
+
+nav .additional-buttons #get-started {
+  background-color: #13c4a1;
+}
+
+nav .additional-buttons #get-started:hover {
+  cursor: pointer;
+  background-color: #080a3c;
+}
+
+nav .additional-buttons #log-in {
+  background-color: #080a3c;
+}
+
+nav .additional-buttons #log-in:hover {
+  cursor: pointer;
+  background-color: #13c4a1;
+}
+
+nav .additional-buttons-active {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
 header {
   background-color: #ff612f;
 }
