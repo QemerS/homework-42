@@ -20,6 +20,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
+  position: relative;
 }
 
 nav .logo {
@@ -37,6 +38,58 @@ nav .menu-buttons button {
 nav .menu-buttons button:hover {
   color: #13c4a1;
   cursor: pointer;
+}
+
+nav .nav-active {
+  visibility: visible !important;
+  height: 300px !important;
+}
+
+nav .nav-links {
+  -webkit-box-shadow: 1px 15px 20px -15px lightgray;
+          box-shadow: 1px 15px 20px -15px lightgray;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  width: 700px;
+  height: 0px;
+  overflow-y: scroll;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .nav-links > * {
+  padding: 15px;
+  text-decoration: none;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-bottom: 1px solid lightgray;
+}
+
+nav .nav-links > *:focus {
+  color: #13c4a1;
+}
+
+nav .nav-links > :first-child {
+  border-top: 1px solid lightgray;
 }
 
 header {
