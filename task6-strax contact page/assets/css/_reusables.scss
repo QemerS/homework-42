@@ -49,3 +49,12 @@ body {
 .additional-buttons-active {
     transform: rotateY(0deg) !important;
 }
+.nav-item {
+    text-decoration: none;
+    color: gray;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    &:focus {
+        color: $mainGreen;
+    }
+}

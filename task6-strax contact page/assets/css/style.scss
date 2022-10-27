@@ -19,10 +19,31 @@ nav {
         left: 0;
         right: 0;
         top: 76px;
-        width: 700px;
+        width: 100%;
         height: 0px;
         overflow-y: scroll;
         visibility: hidden;
+        .inner-links {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: all 0.5s ease-in-out 0.1s;
+            .have-inner-links {
+                position: relative;
+                z-index: 999;
+            }
+            .nav-item {
+                padding-left: 3rem;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+        .inner-links-active {
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: 700px;
+        }
         & > * {
             text-decoration: none;
             color: gray;
@@ -44,15 +65,39 @@ nav {
         button:hover {
             cursor: pointer;
         }
+        button {
+            overflow: hidden;
+            position: relative;
+            .overlay {
+                position: absolute;
+                width: 0;
+                height: 0;
+                transform: translate(-50%, -50%);
+            }
+            &:hover .overlay {
+                width: 225%;
+                height: 225%;
+            }
+            .btn-text {
+                // position is only for make z-index work
+                position: relative;
+                z-index: 999;
+            }
+        }
         #get-started {
             background-color: $mainGreen;
+            box-shadow: none;
+            transition: box-shadow 0.4s 0.1s ease-in-out;
+            .overlay {
+                background-color: $darkBlue
+            }
             &:hover {
-                background-color: $darkBlue;
+                box-shadow: 0px 0px 20px -9px $mainGreen;
             }
         }
         #log-in {
             background-color: $darkBlue;
-            &:hover {
+            .overlay {
                 background-color: $mainGreen;
             }
         }
