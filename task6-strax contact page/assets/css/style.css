@@ -1,37 +1,91 @@
-body {
-  margin: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: sans-serif;
 }
 
-nav {
-  margin: 0 auto;
+body {
+  margin: 0;
+}
+
+.d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.jc-space-btw {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.f-dir-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.align-items-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.transition-05 {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.b-none {
+  border: none;
+}
+
+.c-white {
+  color: white;
+}
+
+.nav-active {
+  visibility: visible !important;
+  height: 300px !important;
+}
+
+.additional-buttons-active {
+  -webkit-transform: rotateY(0deg) !important;
+          transform: rotateY(0deg) !important;
+}
+
+nav {
+  margin: 0 auto;
   width: 80%;
   position: relative;
 }
 
-nav .logo {
-  padding: 10px;
-}
-
 nav .menu-buttons button {
-  border: none;
   background-color: transparent;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   padding: 0.5rem;
 }
 
@@ -40,47 +94,22 @@ nav .menu-buttons button:hover {
   cursor: pointer;
 }
 
-nav .nav-active {
-  visibility: visible !important;
-  height: 300px !important;
-}
-
 nav .nav-links {
   -webkit-box-shadow: 1px 15px 20px -15px lightgray;
           box-shadow: 1px 15px 20px -15px lightgray;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
   left: 0;
   right: 0;
-  top: 64px;
+  top: 76px;
   width: 700px;
   height: 0px;
   overflow-y: scroll;
   visibility: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 nav .nav-links > * {
-  padding: 15px;
   text-decoration: none;
   color: gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   border-bottom: 1px solid lightgray;
 }
 
@@ -93,25 +122,16 @@ nav .nav-links > :first-child {
 }
 
 nav .additional-buttons {
-  position: absolute;
   right: 0;
   top: 60px;
-  background-color: white;
   -webkit-box-shadow: 1px -1px 13px -7px grey;
           box-shadow: 1px -1px 13px -7px grey;
-  padding: 1rem;
-  border-radius: 5px;
   -webkit-transform: rotateY(90deg);
           transform: rotateY(90deg);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
-nav .additional-buttons button {
-  border: none;
-  border-radius: 5px;
-  padding: 1rem;
-  color: white;
+nav .additional-buttons button:hover {
+  cursor: pointer;
 }
 
 nav .additional-buttons #get-started {
@@ -119,7 +139,6 @@ nav .additional-buttons #get-started {
 }
 
 nav .additional-buttons #get-started:hover {
-  cursor: pointer;
   background-color: #080a3c;
 }
 
@@ -128,42 +147,22 @@ nav .additional-buttons #log-in {
 }
 
 nav .additional-buttons #log-in:hover {
-  cursor: pointer;
   background-color: #13c4a1;
-}
-
-nav .additional-buttons-active {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
 }
 
 header {
   background-color: #ff612f;
 }
 
-header .text-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: white;
+header .header-text {
   padding: 80px;
 }
 
-header .text-center > span {
+header .header-text > span {
   padding: 10px 0;
 }
 
-header .text-center > h2 {
+header .header-text > h2 {
   margin: 0;
   font-weight: 700;
   font-size: 2rem;

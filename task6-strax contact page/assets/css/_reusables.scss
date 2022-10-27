@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+}
+.d-flex {
+    display: flex;
+}
+.jc-space-btw {
+    justify-content: space-between;
+}
+.jc-center {
+    justify-content: center;
+}
+.f-dir-column {
+    flex-direction: column;
+}
+.align-items-center {
+    align-items: center;
+}
+.p-1 {
+    padding: 1rem;
+}
+.transition-05 {
+    transition: all 0.5s ease-in-out;
+}
+.p-absolute {
+    position: absolute;
+}
+.bg-white {
+    background-color: white;
+}
+.rounded {
+    border-radius: 5px;
+}
+.b-none {
+    border: none;
+}
+.c-white {
+    color: white;
+}
+// active classes for js
+.nav-active {
+    visibility: visible !important;
+    height: 300px !important;
+}
+.additional-buttons-active {
+    transform: rotateY(0deg) !important;
+}
