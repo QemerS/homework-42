@@ -89,6 +89,12 @@ body {
   color: #13c4a1;
 }
 
+.inner-links-active {
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: 700px !important;
+}
+
 nav {
   margin: 0 auto;
   width: 80%;
@@ -136,12 +142,6 @@ nav .nav-links .inner-links .nav-item {
 
 nav .nav-links .inner-links .nav-item:last-child {
   border-bottom: none;
-}
-
-nav .nav-links .inner-links-active {
-  visibility: visible !important;
-  opacity: 1 !important;
-  height: 700px;
 }
 
 nav .nav-links > * {

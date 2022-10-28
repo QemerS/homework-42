@@ -1,3 +1,4 @@
+// defining behaviour of hamburger menu for mobile nabar
 const menuBtn = document.querySelector('#mobile-menu');
 const navBar = document.querySelector('.nav-links');
 menuBtn.addEventListener('click', function () {
@@ -11,6 +12,7 @@ menuBtn.addEventListener('click', function () {
     }
 });
 
+// defining behaviour of dot menu for displaying 'Get started' and 'Log In' buttons
 const dotBtn = document.querySelector('#dot-menu');
 const addition = document.querySelector('.additional-buttons');
 dotBtn.addEventListener('click', function () {
@@ -25,7 +27,7 @@ additionsButtons.forEach(btn => {
         overlay.setAttribute('style', `left: ${e.offsetX}px; top: ${e.offsetY}px`);
    })
 });
-
+// defining behaviuor of nested nav item's parent nav-link
 const navLinksWithInnerMenu = [...document.getElementsByClassName('have-inner-links')];
 navLinksWithInnerMenu.forEach(mLinks => {
     mLinks.addEventListener('click', function (e) {
