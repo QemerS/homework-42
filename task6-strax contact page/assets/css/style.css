@@ -265,7 +265,6 @@ nav .dropdown > .inner-links {
 
 nav .dropdown .have-inner-links {
   position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,6 +280,14 @@ nav .dropdown .have-inner-links::after {
 
 nav .dropdown .have-inner-links:focus {
   color: #13c4a1;
+}
+
+nav .dropdown .inner-dropdown .inner-links .nav-item {
+  padding: 1rem 5.2rem 1rem 5rem;
+}
+
+nav .dropdown .inner-dropdown .inner-links:last-child {
+  border-bottom: 1px solid lightgray;
 }
 
 nav .nav-links {
@@ -343,7 +350,7 @@ nav .nav-links .inner-links .nav-item:focus {
 nav .nav-links .inner-links-active {
   visibility: visible !important;
   opacity: 1 !important;
-  max-height: 200px;
+  max-height: 600px;
 }
 
 nav .nav-links > * {
