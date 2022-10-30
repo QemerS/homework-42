@@ -1,11 +1,13 @@
 @import 'mixins';
 @import 'reusables';
+@import 'responsivity';
 nav {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     position: relative;
+    display: flex;
     .menu-buttons {
-        button {
+        .menu-button {
             background-color: transparent;
             padding: 0.5rem;
             &:hover {
@@ -14,34 +16,73 @@ nav {
             }
         }
     }
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        & > .inner-links {
+            border-top: 1px solid lightgray;
+            background-color: white;
+        }
+        .have-inner-links {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            color: inherit;
+            // for button
+            border: none;
+            background-color: transparent;
+            font-size: inherit;
+            &::after {
+                content: '+';
+            }
+            &:focus {
+                color: $mainGreen
+            }
+        }
+    }
     .nav-links {
         box-shadow: 1px 15px 20px -15px lightgray;
+        position: absolute;
         left: 0;
         right: 0;
         top: 76px;
-        width: 100%;
+        width: 80%;
         height: 0px;
         overflow-y: scroll;
         visibility: hidden;
+        display: inline-flex;
+        flex-direction: column;
+        margin: 0 auto;
         .inner-links {
+            display: inline-flex;
+            flex-direction: column;
             visibility: hidden;
             opacity: 0;
-            height: 0;
+            max-height: 0px;
             transition: all 0.5s ease-in-out 0.1s;
-            .have-inner-links {
-                position: relative;
-                z-index: 999;
-            }
+            
             .nav-item {
-                padding-left: 3rem;
+                padding: 1rem 1rem 1rem 3rem;
+                display: flex;
                 &:last-child {
                     border-bottom: none;
                 }
             }
+            .nav-item {
+                color: gray;
+                width: 100%;
+                border-bottom: 1px solid lightgray;
+                &:focus {
+                    color: $mainGreen;
+                }
+            }
         }
-        
+        .inner-links-active {
+            visibility: visible !important;
+            opacity: 1 !important;
+            max-height: 200px;
+        }
         & > * {
-            text-decoration: none;
             color: gray;
             width: 100%;
             border-bottom: 1px solid lightgray;
@@ -54,6 +95,7 @@ nav {
         }
     }
     .additional-buttons {
+        position: absolute;
         right: 0;
         top: 60px;
         box-shadow: 1px -1px 13px -7px grey;
@@ -88,8 +130,9 @@ nav {
                 background-color: $darkBlue
             }
             &:hover {
-                box-shadow: 0px 0px 20px -9px $mainGreen;
+                box-shadow: 0px 0px 20px -6px $mainGreen;
             }
+            
         }
         #log-in {
             background-color: $darkBlue;
@@ -98,10 +141,19 @@ nav {
             }
         }
     }
+    .additional-buttons-active {
+        transform: rotateY(0deg) !important;
+    }
+}
+.nav-active {
+    visibility: visible !important;
+    height: 300px !important;
 }
 header {
     background-color: $mainOrange;
     .header-text {
+        display: flex;
+        flex-direction: column;
         padding: 80px;
         & > span {
             padding: 10px 0;
@@ -111,5 +163,6 @@ header {
             font-weight: 700;
             font-size: 2rem;
         }
+        
     }
 }

@@ -25,14 +25,28 @@ additionsButtons.forEach(btn => {
     btn.addEventListener('mouseenter', (e) => {
         const overlay = e.target.children[2];
         overlay.setAttribute('style', `left: ${e.offsetX}px; top: ${e.offsetY}px`);
-   })
-});
-// defining behaviuor of nested nav item's parent nav-link
-const navLinksWithInnerMenu = [...document.getElementsByClassName('have-inner-links')];
-navLinksWithInnerMenu.forEach(mLinks => {
-    mLinks.addEventListener('click', function (e) {
-        e.preventDefault();
-        let innerLinks = this.nextElementSibling;
-        innerLinks.classList.toggle('inner-links-active');
     })
 });
+
+// defining behaviuor of nested nav item's parent nav-link
+function parentNavClickHandle(e) {
+    e.preventDefault();
+    let innerLinks = this.nextElementSibling;
+    innerLinks.classList.toggle('inner-links-active');
+}
+// if screen ize not more than 990px adding event listener to the parent navlink
+let mediaQuery = window.matchMedia("(max-width:990px)");
+function addingEvent(mediaQuery) {
+    const navLinksWithInnerMenu = [...document.getElementsByClassName('have-inner-links')];
+    if (mediaQuery.matches) {
+        navLinksWithInnerMenu.forEach(mLinks => {
+            mLinks.addEventListener('click', parentNavClickHandle)
+        });
+    } else {
+        navLinksWithInnerMenu.forEach(mLinks => {
+            mLinks.removeEventListener('click', parentNavClickHandle)
+        });
+    }
+}
+addingEvent(mediaQuery);
+mediaQuery.addListener(addingEvent);

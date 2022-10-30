@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,81 +12,107 @@
     <!-- <link rel="stylesheet" href="vendor/bootstrap-5.0.2-dist/css/bootstrap.css"> -->
     <!-- <script defer src="vendor/bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
     <!--Font Awasome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Links ends-->
     <title>Document</title>
 </head>
+
 <body>
     <!-- Page starts -->
-    <nav class="d-flex jc-space-btw align-items-center">
+    <nav class="jc-space-btw align-items-center">
         <div class="p-1">
             <a href="#" target="_blank" rel="noopener noreferrer">
                 <img src="https://templates.envytheme.com/strax/default/assets/img/logo.png" alt="Logo">
             </a>
         </div>
-        <div class="nav-links d-flex f-dir-column transition-05 p-absolute bg-white">
-            <a class="nav-item have-inner-links transition-05 d-flex jc-space-btw p-1" href="#">
-                <span>Home</span>
-                <span>+</span>
-            </a>
-            <div class="inner-links d-flex f-dir-column">
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
-            </div>
-            <a class="nav-item transition-05 p-1" href="#" target="_blank">About Us</a>
-            <a class="nav-item transition-05 p-1" href="#" target="_blank">Pricing</a>
-            <a class="nav-item have-inner-links transition-05 d-flex jc-space-btw p-1" href="#">
-                <span>Pages</span>
-                <span>+</span>
-            </a>
-            <div class="inner-links d-flex f-dir-column">
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
-            </div>
-            <a class="nav-item have-inner-links transition-05 d-flex jc-space-btw p-1" href="#">
-                <span>Blog</span>
-                <span>+</span>
-            </a>
-            <div class="inner-links d-flex f-dir-column">
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
-                <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
-            </div>
-            <a class="nav-item transition-05 p-1" href="#" target="_blank">Contact</a>
-        </div>
+        <div class="navbar-items">
+            <div class="nav-links transition-05 bg-white">
+                <div class="dropdown">
+                    <a class="nav-item have-inner-links transition-05 jc-space-btw p-1" href="#">
+                        <span>Home</span>
+                    </a>
+                    <div class="inner-links">
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Services</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
+                    </div>
+                </div>
+                <a class="nav-item transition-05 p-1" href="#" target="_blank">About Us</a>
+                <a class="nav-item transition-05 p-1" href="#" target="_blank">Pricing</a>
+                <div class="dropdown">
+                    <a class="nav-item have-inner-links transition-05 jc-space-btw p-1" href="#">
+                        <span>Pages</span>
+                    </a>
+                    <div class="inner-links">
+                        <div class="inner-dropdown">
+                            <a class="nav-item have-inner-links transition-05 jc-space-btw p-1" href="#">
+                                <span>Services</span>
+                            </a>
+                            <div class="inner-links">
+                                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services Style One</a>
+                                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services Style Two</a>
+                                <a class="nav-item transition-05 p-1" href="#" target="_blank">Services Style Three</a>
+                                <a class="nav-item transition-05 p-1" href="#" target="_blank">Service Details</a>
+                            </div>
+                        </div>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Log In</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Sign Up</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">FAQ</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">404 Error</a>
 
-        <!-- Additional 'Get started' and 'Log In' buttons -->
-        <div class="additional-buttons p-1 transition-05 p-absolute bg-white rounded">
-            <button class="p-1 rounded b-none c-white" id="get-started">
-                <i class="fa-brands fa-hotjar btn-text"></i>
-                <span class="btn-text">Get Started</span>
-                <div class="overlay transition-05"></div>
-            </button>
-            <button class="p-1 rounded b-none c-white" id="log-in">
-                <i class="fa-solid fa-right-to-bracket btn-text"></i>
-                <span class="btn-text">Log In</span>
-                <div class="overlay transition-05"></div>
-            </button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="nav-item have-inner-links transition-05 jc-space-btw p-1" href="#">
+                        <span>Blog</span>
+                    </a>
+                    <div class="inner-links">
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Services</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Features</a>
+                        <a class="nav-item transition-05 p-1" href="#" target="_blank">Team</a>
+                    </div>
+                </div>
+                <a class="nav-item transition-05 p-1" href="#" target="_blank">Contact</a>
+            </div>
+
+            <!-- Additional 'Get started' and 'Log In' buttons -->
+            <div class="additional-buttons p-1 transition-05 bg-white rounded">
+                <button class="p-1 rounded b-none c-white" id="get-started">
+                    <i class="fa-brands fa-hotjar btn-text"></i>
+                    <span class="btn-text">Get Started</span>
+                    <div class="overlay transition-05"></div>
+                </button>
+                <button class="p-1 rounded b-none c-white" id="log-in">
+                    <i class="fa-solid fa-right-to-bracket btn-text"></i>
+                    <span class="btn-text">Log In</span>
+                    <div class="overlay transition-05"></div>
+                </button>
+            </div>
         </div>
 
         <!-- Buttons for mobile behaviour -->
         <div class="menu-buttons">
-            <button class="transition-05 b-none" id="dot-menu"><i class="fa-solid fa-ellipsis fa-2xl"></i></button>
-            <button class="transition-05 b-none" id="mobile-menu"><i class="fa-solid fa-bars fa-2xl"></i></button>
+            <button class="transition-05 b-none menu-button" id="dot-menu"><i
+                    class="fa-solid fa-ellipsis fa-2xl"></i></button>
+            <button class="transition-05 b-none menu-button" id="mobile-menu"><i
+                    class="fa-solid fa-bars fa-2xl"></i></button>
         </div>
     </nav>
 
     <!-- Header starts -->
     <header>
-        <div class="header-text d-flex f-dir-column align-items-center jc-center c-white">
+        <div class="header-text align-items-center jc-center c-white">
             <h2>Contact Us</h2>
             <span>Drop us Message for any Query</span>
         </div>
     </header>
     <!-- Header ends -->
-    
+
     <!-- Page ends -->
 </body>
+
 </html>
