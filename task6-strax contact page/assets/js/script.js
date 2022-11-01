@@ -21,12 +21,13 @@ dotBtn.addEventListener('click', function () {
 
 // giving position's top and left for overlay on hovering additiional buttons
 const additionsButtons = [...addition.children];
-additionsButtons.forEach(btn => {
+additionsButtons.forEach(btn => addOverlay(btn));
+function addOverlay(btn) {
     btn.addEventListener('mouseenter', (e) => {
         const overlay = e.target.children[2];
         overlay.setAttribute('style', `left: ${e.offsetX}px; top: ${e.offsetY}px`);
     })
-});
+}
 
 // defining behaviuor of nested nav item's parent nav-link
 function parentNavClickHandle(e) {
@@ -38,7 +39,7 @@ function parentNavClickHandle(e) {
 let mediaQuery = window.matchMedia("(max-width:990px)");
 function addingEvent(mediaQuery) {
     const navLinksWithInnerMenu = [...document.getElementsByClassName('have-inner-links')];
-    // @param(aditionalBtnText) for changing text of firts additional button in devices with bigger screen
+    // @param(aditionalBtnText) forchanging text of firts additional button in devices with bigger screen
     const aditionalBtnText = document.getElementById('get-started').children[1];
     if (mediaQuery.matches) {
         navLinksWithInnerMenu.forEach(mLinks => {
@@ -56,3 +57,6 @@ function addingEvent(mediaQuery) {
 }
 addingEvent(mediaQuery);
 mediaQuery.addListener(addingEvent);
+
+const sendMsgBtn = document.getElementById('send-msg-btn');
+addOverlay(sendMsgBtn);

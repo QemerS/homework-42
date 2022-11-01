@@ -9,6 +9,26 @@ a {
   text-decoration: none;
 }
 
+textarea, input {
+  font-size: 1rem;
+  width: -webkit-fill-available;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea:focus, input:focus,
+textarea:active, input:active {
+  outline: none;
+}
+
+ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+}
+
 body {
   margin: 0;
 }
@@ -35,6 +55,37 @@ body {
   padding: 1rem;
 }
 
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.p-05 {
+  padding: 0.5rem;
+}
+
+.m-05 {
+  margin: 0.5rem;
+}
+
+.my-05 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-2 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .transition-05 {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -54,6 +105,105 @@ body {
 
 .c-white {
   color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0.5rem;
+}
+
+.row > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.col-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 49%;
+}
+
+.col-12 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  width: 99%;
+}
+
+@media only screen and (max-width: 990px) {
+  .col-6 {
+    width: 100%;
+  }
+}
+
+.add-shadow {
+  -webkit-box-shadow: 1px 15px 20px 10px lightgray;
+          box-shadow: 1px 15px 20px 10px lightgray;
+}
+
+.v-line {
+  min-height: 1rem;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  border-left: 1px solid lightgray;
+  width: 1px;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 990px) {
@@ -239,13 +389,11 @@ nav {
 }
 
 nav .menu-buttons .menu-button {
-  background-color: transparent;
   padding: 0.5rem;
 }
 
 nav .menu-buttons .menu-button:hover {
   color: #13c4a1;
-  cursor: pointer;
 }
 
 nav .dropdown {
@@ -377,10 +525,6 @@ nav .additional-buttons {
           transform: rotateY(90deg);
 }
 
-nav .additional-buttons button:hover {
-  cursor: pointer;
-}
-
 nav .additional-buttons button {
   overflow: hidden;
   position: relative;
@@ -465,5 +609,63 @@ header .header-text > h2 {
   margin: 0;
   font-weight: 700;
   font-size: 2rem;
+}
+
+#contact-us {
+  color: #080a3c;
+}
+
+#contact-us p, #contact-us h3, #contact-us h4, #contact-us li > span {
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  color: inherit;
+}
+
+#contact-us p, #contact-us span {
+  opacity: 0.8;
+}
+
+#contact-us input, #contact-us textarea {
+  border: none;
+  outline: 0.5px solid #080a3c60;
+}
+
+#contact-us input:focus, #contact-us textarea:focus {
+  outline: 0.5px solid #13c4a1;
+}
+
+#contact-us li > i::before {
+  color: #13c4a1;
+}
+
+#contact-us button {
+  background-color: #ff612f;
+  padding: 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact-us button span {
+  color: white;
+  font-weight: bolder;
+}
+
+#contact-us button i, #contact-us button span {
+  position: relative;
+  z-index: 999;
+}
+
+#contact-us button .overlay {
+  background-color: #13c4a1;
+  position: absolute;
+  width: 0;
+  height: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#contact-us button:hover .overlay {
+  width: 300%;
+  height: 300%;
 }
 /*# sourceMappingURL=style.css.map */

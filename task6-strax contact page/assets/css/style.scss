@@ -8,11 +8,9 @@ nav {
     display: flex;
     .menu-buttons {
         .menu-button {
-            background-color: transparent;
             padding: 0.5rem;
             &:hover {
                 color: $mainGreen;
-                cursor: pointer;
             }
         }
     }
@@ -110,9 +108,6 @@ nav {
         top: 60px;
         box-shadow: 1px -1px 13px -7px grey;
         transform: rotateY(90deg);
-        button:hover {
-            cursor: pointer;
-        }
         button {
             overflow: hidden;
             position: relative;
@@ -175,5 +170,51 @@ header {
             font-size: 2rem;
         }
         
+    }
+}
+#contact-us {
+    color: $darkBlue;
+    p,h3,h4, li > span {
+        line-height: 1.5rem;
+        letter-spacing: 0.5px;
+        color: inherit;
+    }
+    p, span {
+        opacity: 0.8;
+    }
+    input, textarea {
+        border: none;
+        outline: 0.5px solid $lightDarkBlue;
+    }
+    input:focus, textarea:focus {
+        outline: 0.5px solid $mainGreen;
+    }
+    li > i::before {
+        color: $mainGreen;
+    }
+    button {
+        background-color: $mainOrange;
+        padding: 1rem 2rem;
+        position: relative;
+        overflow: hidden;
+        span {
+            color: white;
+            font-weight: bolder;
+        }
+        i,span {
+            position: relative;
+            z-index: 999;
+        }
+        .overlay {
+            background-color: $mainGreen;
+            position: absolute;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+        }
+        &:hover .overlay {
+            width: 300%;
+            height: 300%;
+        }
     }
 }
