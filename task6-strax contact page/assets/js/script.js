@@ -38,14 +38,20 @@ function parentNavClickHandle(e) {
 let mediaQuery = window.matchMedia("(max-width:990px)");
 function addingEvent(mediaQuery) {
     const navLinksWithInnerMenu = [...document.getElementsByClassName('have-inner-links')];
+    // @param(aditionalBtnText) for changing text of firts additional button in devices with bigger screen
+    const aditionalBtnText = document.getElementById('get-started').children[1];
     if (mediaQuery.matches) {
         navLinksWithInnerMenu.forEach(mLinks => {
-            mLinks.addEventListener('click', parentNavClickHandle)
+            mLinks.addEventListener('click', parentNavClickHandle);
         });
+        // change additional btn text
+        aditionalBtnText.textContent = 'Get Started';
     } else {
         navLinksWithInnerMenu.forEach(mLinks => {
             mLinks.removeEventListener('click', parentNavClickHandle)
         });
+        // change additional btn text
+        aditionalBtnText.textContent = 'Try It Free Now';
     }
 }
 addingEvent(mediaQuery);
