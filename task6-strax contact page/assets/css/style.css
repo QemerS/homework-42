@@ -86,6 +86,10 @@ body {
   margin-bottom: 2rem !important;
 }
 
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
 .transition-05 {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -197,6 +201,12 @@ body {
   padding: 0;
 }
 
+@media only screen and (max-width: 990px) {
+  .v-line {
+    display: none;
+  }
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -204,6 +214,27 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.d-flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (min-width: 990px) {
@@ -615,6 +646,16 @@ header .header-text > h2 {
   color: #080a3c;
 }
 
+#contact-us .container {
+  margin: 5rem;
+}
+
+@media only screen and (max-width: 990px) {
+  #contact-us .container .row div[class="col-6 my-2"] {
+    margin-bottom: 0 !important;
+  }
+}
+
 #contact-us p, #contact-us h3, #contact-us h4, #contact-us li > span {
   line-height: 1.5rem;
   letter-spacing: 0.5px;
@@ -667,5 +708,48 @@ header .header-text > h2 {
 #contact-us button:hover .overlay {
   width: 300%;
   height: 300%;
+}
+
+#contact-us button:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #13c4a1;
+          box-shadow: 0px 0px 5px 0px #13c4a1;
+}
+
+#contact-us .contact-link {
+  font-size: 2rem;
+}
+
+#contact-us .contact-link[href="tel:+"] {
+  color: #13c4a1;
+}
+
+#contact-us .contact-link[href="tel:+"]:hover {
+  color: #ff612f;
+}
+
+#contact-us .contact-link[href="mailto:"] {
+  color: #ff612f;
+}
+
+#contact-us .contact-link[href="mailto:"]:hover {
+  color: #13c4a1;
+}
+
+#contact-us .sosial-links {
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 30px;
+  color: gray;
+}
+
+#contact-us .sosial-links i[class="fa-brands fa-facebook-f p-05"] {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+#contact-us .sosial-links:hover, #contact-us .sosial-links:focus {
+  color: white;
+  background-color: #13c4a1;
+  border-color: #13c4a1;
 }
 /*# sourceMappingURL=style.css.map */
