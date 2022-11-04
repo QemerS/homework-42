@@ -108,25 +108,7 @@ nav {
         top: 60px;
         box-shadow: 1px -1px 13px -7px grey;
         transform: rotateY(90deg);
-        button {
-            overflow: hidden;
-            position: relative;
-            .overlay {
-                position: absolute;
-                width: 0;
-                height: 0;
-                transform: translate(-50%, -50%);
-            }
-            &:hover .overlay {
-                width: 225%;
-                height: 225%;
-            }
-            .btn-text {
-                // position is only for make z-index work
-                position: relative;
-                z-index: 999;
-            }
-        }
+        @include wideBtn;
         #get-started {
             background-color: $mainGreen;
             box-shadow: none;
@@ -202,29 +184,16 @@ header {
     li > i::before {
         color: $mainGreen;
     }
+    @include wideBtn;
     button {
         background-color: $mainOrange;
         padding: 1rem 2rem;
-        position: relative;
-        overflow: hidden;
         span {
             color: white;
             font-weight: bolder;
         }
-        i,span {
-            position: relative;
-            z-index: 999;
-        }
         .overlay {
             background-color: $mainGreen;
-            position: absolute;
-            width: 0;
-            height: 0;
-            transform: translate(-50%, -50%);
-        }
-        &:hover .overlay {
-            width: 300%;
-            height: 300%;
         }
         &:hover {
             box-shadow: 0px 0px 5px 0px $mainGreen;

@@ -1,2 +1,23 @@
 @import 'colors';
 @import 'variables';
+@mixin wideBtn () {
+    button {
+        overflow: hidden;
+        position: relative;
+        .overlay {
+            position: absolute;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+        }
+        &:hover .overlay {
+            width: 225%;
+            height: 225%;
+        }
+        .btn-text {
+            // position is only for make z-index work
+            position: relative;
+            z-index: 999;
+        }
+    }
+}

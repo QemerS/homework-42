@@ -680,24 +680,11 @@ header .header-text > h2 {
 }
 
 #contact-us button {
-  background-color: #ff612f;
-  padding: 1rem 2rem;
-  position: relative;
   overflow: hidden;
-}
-
-#contact-us button span {
-  color: white;
-  font-weight: bolder;
-}
-
-#contact-us button i, #contact-us button span {
   position: relative;
-  z-index: 999;
 }
 
 #contact-us button .overlay {
-  background-color: #13c4a1;
   position: absolute;
   width: 0;
   height: 0;
@@ -706,8 +693,27 @@ header .header-text > h2 {
 }
 
 #contact-us button:hover .overlay {
-  width: 300%;
-  height: 300%;
+  width: 225%;
+  height: 225%;
+}
+
+#contact-us button .btn-text {
+  position: relative;
+  z-index: 999;
+}
+
+#contact-us button {
+  background-color: #ff612f;
+  padding: 1rem 2rem;
+}
+
+#contact-us button span {
+  color: white;
+  font-weight: bolder;
+}
+
+#contact-us button .overlay {
+  background-color: #13c4a1;
 }
 
 #contact-us button:hover {
