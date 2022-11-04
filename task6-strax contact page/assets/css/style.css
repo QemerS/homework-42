@@ -237,6 +237,10 @@ h4 {
           justify-content: center;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 990px) {
   nav {
     width: 90% !important;
@@ -407,6 +411,27 @@ h4 {
   }
   nav .additional-buttons #log-in:hover, nav .additional-buttons #log-in:hover i {
     color: white !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #contact-us .container {
+    margin: 1rem !important;
+  }
+  #contact-us .container h3, #contact-us .container h4 {
+    text-align: center;
+    line-height: inherit;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  #contact-us .form-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

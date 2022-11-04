@@ -176,3 +176,22 @@
         }
     }
 }
+@media only screen and (max-width: 576px) {
+    #contact-us {
+        .container {
+            margin: 1rem !important;
+            h3,h4 {
+                text-align: center;
+                line-height: inherit;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 990px) {
+    #contact-us {
+        .form-btn-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
