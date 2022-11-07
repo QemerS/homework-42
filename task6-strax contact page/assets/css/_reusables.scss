@@ -135,7 +135,7 @@ body {
 }
 .col-2 {
     flex: 0 0 auto;
-    max-width: 16.66%;
+    width: 16.66%;
 }
 .col-6 {
     flex: 0 0 auto;
@@ -145,8 +145,24 @@ body {
     flex: 1 0 100%;
     width: 99%;
 }
+.col-auto {
+    flex: 0 0 auto;
+    width: fit-content;
+}
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
 @media only screen and (max-width: 990px) {
     .col-6 {
+        width: 100%;
+    }
+    .col-2, .col-3,.col-auto {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .col-2, .col-3,.col-auto {
         width: 100%;
     }
 }

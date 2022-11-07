@@ -253,3 +253,18 @@ header {
         color: $darkBlue;
     }
 }
+footer {
+    .footer-main-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        & > span {
+            position: absolute;
+            left: 50px;
+        }
+    }
+    h4 {
+        height: 30px;
+    }
+}
