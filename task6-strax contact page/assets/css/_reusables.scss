@@ -37,6 +37,9 @@ body {
 .p-1 {
     padding: 1rem;
 }
+.p-2 {
+    padding: 2rem;
+}
 .m-1 {
     margin: 1rem;
 }
@@ -63,6 +66,13 @@ body {
 }
 .mb-2 {
     margin-bottom: 2rem !important;
+}
+.mx-05 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.py1-px3 {
+    padding: 1rem 3rem !important;
 }
 .transition-05 {
     transition: all 0.5s ease-in-out;
@@ -123,6 +133,10 @@ body {
         margin-bottom: 0.5rem;
     }
 }
+.col-2 {
+    flex: 0 0 auto;
+    max-width: 16.66%;
+}
 .col-6 {
     flex: 0 0 auto;
     width: 49%;
@@ -175,4 +189,7 @@ h4 {
 
 .text-uppercase {
     text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
 }

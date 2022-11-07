@@ -55,6 +55,10 @@ body {
   padding: 1rem;
 }
 
+.p-2 {
+  padding: 2rem;
+}
+
 .m-1 {
   margin: 1rem;
 }
@@ -88,6 +92,15 @@ body {
 
 .mb-2 {
   margin-bottom: 2rem !important;
+}
+
+.mx-05 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.py1-px3 {
+  padding: 1rem 3rem !important;
 }
 
 .transition-05 {
@@ -166,6 +179,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.col-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 16.66%;
+}
+
 .col-6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -239,6 +259,10 @@ h4 {
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media only screen and (min-width: 990px) {
@@ -782,5 +806,36 @@ header .header-text > h2 {
   color: white;
   background-color: #13c4a1;
   border-color: #13c4a1;
+}
+
+#clients {
+  background-color: #f4f5fe;
+}
+
+#clients .col-2 {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: white;
+  display: table;
+}
+
+#clients .col-2 img {
+  max-width: inherit;
+}
+
+#clients .client-container:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 0px 10px 1px lightgrey;
+          box-shadow: 0px 0px 10px 1px lightgrey;
+}
+
+#clients .client-container:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#clients h2 {
+  color: #080a3c;
 }
 /*# sourceMappingURL=style.css.map */
