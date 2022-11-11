@@ -60,3 +60,22 @@ mediaQuery.addListener(addingEvent);
 
 const sendMsgBtn = document.getElementById('send-msg-btn');
 addOverlay(sendMsgBtn);
+
+// adding basic validation to the form
+const myForm = document.forms[0];
+myForm.addEventListener('input', inputEventHandler);
+myForm.addEventListener('click', inputEventHandler);
+
+function inputEventHandler(e) {
+    const inputValueLength = e.target.value.length;
+    const errorOfInput = e.target.nextElementSibling;
+    const specifiedErrText = e.target.getAttribute('name');
+    if (inputValueLength > 0) {
+        errorOfInput.textContent = '';
+        errorOfInput.classList = 'error';
+    } else {
+        errorOfInput.textContent = `Please enter your ${specifiedErrText}`;
+        errorOfInput.classList = 'error-active';
+    }
+}
+

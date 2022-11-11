@@ -219,3 +219,11 @@ h4 {
 .text-center {
     text-align: center;
 }
+.error {
+    padding-top: 0;
+}
+.error-active {
+    color: red;
+    padding-top: 0.5rem;
+    display: block;
+}
