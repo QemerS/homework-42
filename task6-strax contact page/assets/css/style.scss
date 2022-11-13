@@ -2,6 +2,26 @@
 @import 'reusables';
 @import 'responsivity';
 nav {
+    width: 100%;
+    background: white;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+@keyframes navDown {
+    from {
+        top: -80px;
+    }
+    to {
+        top: 0px;
+    }
+}
+.nav-on-scroll {
+    position: fixed;
+    box-shadow: 0px 0px 10px 1px lightgrey;
+    transition: all 1s ease-in-out;
+    animation: navDown ease-in-out 0.5s;
+}
+.nav-container {
     margin: 0 auto;
     width: 100%;
     position: relative;

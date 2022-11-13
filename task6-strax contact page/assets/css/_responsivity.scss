@@ -1,6 +1,6 @@
 @import 'colors';
 @media only screen and (min-width: 990px) {
-    nav {
+    .nav-container {
         width: 90% !important;
 
         .menu-buttons {
@@ -146,7 +146,7 @@
     }
 }
 @media only screen and (min-width: 1200px) {
-    nav {
+    .nav-container {
         width: 83% !important;
         .additional-buttons {
             // #get-started {

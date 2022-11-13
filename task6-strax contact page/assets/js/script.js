@@ -78,4 +78,12 @@ function inputEventHandler(e) {
         errorOfInput.classList = 'error-active';
     }
 }
-
+window.addEventListener('scroll', changeNavOnScroll);
+function changeNavOnScroll() {
+    const nav = document.getElementsByTagName('nav')[0];
+    if (window.scrollY > 100) {
+        nav.classList.add('nav-on-scroll');
+    } else {
+        nav.classList.remove('nav-on-scroll');
+    }
+}
