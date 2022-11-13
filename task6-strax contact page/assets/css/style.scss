@@ -20,6 +20,7 @@ nav {
     box-shadow: 0px 0px 10px 1px lightgrey;
     transition: all 1s ease-in-out;
     animation: navDown ease-in-out 0.5s;
+    z-index: 2;
 }
 .nav-container {
     margin: 0 auto;

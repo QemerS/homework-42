@@ -543,6 +543,7 @@ nav {
   transition: all 1s ease-in-out;
   -webkit-animation: navDown ease-in-out 0.5s;
           animation: navDown ease-in-out 0.5s;
+  z-index: 2;
 }
 
 .nav-container {
@@ -711,7 +712,7 @@ nav {
 
 .nav-container .additional-buttons button .btn-text {
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 
 .nav-container .additional-buttons #get-started {
@@ -834,7 +835,7 @@ header .header-text > h2 {
 
 #contact-us button .btn-text {
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 
 #contact-us button {
