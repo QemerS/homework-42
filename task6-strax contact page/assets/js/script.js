@@ -78,12 +78,26 @@ function inputEventHandler(e) {
         errorOfInput.classList = 'error-active';
     }
 }
+// moving to the top of page bt clicking this button
+const moveToTopBtn = document.getElementById('move-to-top');
+moveToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
+
+// showing move to top button and navbar on scroll
 window.addEventListener('scroll', changeNavOnScroll);
 function changeNavOnScroll() {
     const nav = document.getElementsByTagName('nav')[0];
     if (window.scrollY > 100) {
         nav.classList.add('nav-on-scroll');
+        moveToTopBtn.classList.add('move-to-top-active');
     } else {
         nav.classList.remove('nav-on-scroll');
+        moveToTopBtn.classList.remove('move-to-top-active');
     }
 }
+

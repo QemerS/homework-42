@@ -362,3 +362,37 @@ footer::before {
     animation: fadeInOut 1s ease-in-out infinite;
     z-index: 0;
 }
+#move-to-top {
+    
+    background-color: white;
+    box-shadow: 0px 0px 10px -2px grey;
+    border-radius: 200px;
+    
+    i {
+        padding: 0.8rem 0.5rem;
+        font-size: 1.2rem;
+    }
+    &:hover {
+        background-color: $mainOrange;
+        transform: translateY(-20%);
+    }
+    &:hover i {
+        color: white;
+    }
+    visibility: hidden;
+}
+.move-to-top-active {
+    visibility: visible !important;
+    @keyframes toUp {
+        from {
+            bottom: -1rem;
+        }
+        to {
+            bottom: 1rem;
+        }
+    }
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    animation: toUp 0.5s ease-in-out;
+}
