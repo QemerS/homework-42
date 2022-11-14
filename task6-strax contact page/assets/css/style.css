@@ -507,6 +507,9 @@ h4 {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .nav-links {
+    top: 71px !important;
+  }
 }
 
 nav {
