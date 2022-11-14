@@ -1,6 +1,4 @@
 @import 'mixins';
-@import 'reusables';
-@import 'responsivity';
 nav {
     width: 100%;
     background: white;
@@ -397,3 +395,6 @@ footer::before {
     right: 1rem;
     animation: toUp 0.5s ease-in-out;
 }
+
+@import 'reusables';
+@import 'responsivity';

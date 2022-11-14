@@ -1,24 +1,24 @@
 @import 'colors';
 @media only screen and (min-width: 990px) {
     .nav-container {
-        width: 90% !important;
+        width: 90%  ;
 
         .menu-buttons {
-            display: none !important;
+            display: none  ;
         }
         .navbar-items {
             display: flex;
             align-items: center;
         }
         .nav-links {
-            box-shadow: none !important;
-            position: initial !important;
-            width: fit-content !important;
-            height: fit-content !important;
-            overflow-y: unset !important;
-            visibility: visible !important;
-            flex-direction: row !important;
-            // display: inherit !important;
+            box-shadow: none  ;
+            position: initial  ;
+            width: fit-content  ;
+            height: fit-content  ;
+            overflow-y: unset  ;
+            visibility: visible  ;
+            flex-direction: row  ;
+            // display: inherit  ;
             .nav-item, .dropdown > .nav-item {
                 padding: 33px 1rem;
             }
@@ -28,7 +28,7 @@
             .have-inner-links {
                 // position: relative;
                 &::after {
-                    content: '⌄' !important;
+                    content: '⌄'  ;
                     font-weight: bold;
                     transform: translateY(-5px);
                 }
@@ -41,7 +41,7 @@
                         position: relative;
                         & > a {
                             &::after {
-                                content: '' !important;
+                                content: ''  ;
                             }
                         }
                         .inner-links {
@@ -50,16 +50,16 @@
                             
                             z-index: 1;
                             .nav-item {
-                                padding:  0.6rem 5rem 0.6rem 0.6rem !important;
+                                padding:  0.6rem 5rem 0.6rem 0.6rem  ;
                             }
                         }
                         .have-inner-links:hover + .inner-links,
                         .inner-links:hover {
-                            display: block !important;
-                            opacity: 1 !important;
-                            visibility: visible !important;
-                            transform: translateY(-10px) !important;
-                            max-height: fit-content !important;
+                            display: block  ;
+                            opacity: 1  ;
+                            visibility: visible  ;
+                            transform: translateY(-10px)  ;
+                            max-height: fit-content  ;
                         }
                     }
                 }
@@ -67,26 +67,26 @@
             // adding hover for both to fix behaviour of have-inner-links on hover
             .dropdown > .have-inner-links:hover + .inner-links,
             .inner-links:hover {
-                display: block !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                transform: translateY(-10px) !important;
-                max-height: fit-content !important;
+                display: block  ;
+                opacity: 1  ;
+                visibility: visible  ;
+                transform: translateY(-10px)  ;
+                max-height: fit-content  ;
             }
             .inner-links {
                 position: absolute;
                 top: 5.7rem;
                 left: 0;
-                // height: fit-content !important;
+                // height: fit-content  ;
                 background-color: white;
-                border-radius: 5px !important;
-                border-top: 1px solid $mainGreen !important;
-                transition: all 0.3s !important;
+                border-radius: 5px  ;
+                border-top: 1px solid $mainGreen  ;
+                transition: all 0.3s  ;
                 // for fixing border-radius behaviour at the
                 // bottom of the inner-links
                 padding: 0.1rem;
                 .nav-item {
-                    padding: 0.6rem 10rem 0.6rem 2rem !important;
+                    padding: 0.6rem 10rem 0.6rem 2rem  ;
                     display: flex;
                     background: white;
                     &:last-child {
@@ -99,20 +99,20 @@
             }
             
             & > * {
-                width: fit-content !important;
-                border-bottom: none !important;
+                width: fit-content  ;
+                border-bottom: none  ;
                 &:focus {
                     color: $mainGreen;
                 }
             }
             & > :first-child {
-                border-top: none !important;
+                border-top: none  ;
             }
         }
         .additional-buttons {
-            position: initial !important;
-            box-shadow: none!important;
-            transform: rotateY(0deg) !important;
+            position: initial  ;
+            box-shadow: none ;
+            transform: rotateY(0deg)  ;
             display: flex;
             button {
                 padding: 0.8rem 2rem;
@@ -138,16 +138,16 @@
     }
     header {
         .header-text {
-            padding: 8rem 1rem !important;
+            padding: 8rem 1rem  ;
             & > h2 {
-                font-size: 2.5rem !important;
+                font-size: 2.5rem  ;
             }
         }
     }
 }
 @media only screen and (min-width: 1200px) {
     .nav-container {
-        width: 83% !important;
+        width: 83%  ;
         .additional-buttons {
             // #get-started {
             //     .overlay {
@@ -159,18 +159,18 @@
             // }
             #log-in {
                 display: block;
-                background-color: transparent !important;
+                background-color: transparent  ;
                 border: 1px solid $darkBlue;
                 color: inherit;
                 transition: all 0.5s ease-in-out;
                 & > i {
-                    color: $mainOrange !important;
+                    color: $mainOrange  ;
                 }
                 .overlay {
-                    background-color: $darkBlue !important;
+                    background-color: $darkBlue  ;
                 }
                 &:hover, &:hover i {
-                    color: white !important;
+                    color: white  ;
                 }
             }
         }
@@ -179,7 +179,7 @@
 @media only screen and (max-width: 576px) {
     #contact-us {
         .container {
-            margin: 1rem !important;
+            margin: 1rem  ;
             h3,h4 {
                 text-align: center;
                 line-height: inherit;
